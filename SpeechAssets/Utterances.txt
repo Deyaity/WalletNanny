@@ -1,6 +1,6 @@
 AddJob add {Wages} dollars for {Hours}
 AddJob i worked {Hours} this week and made {Wages} dollars per hour
-AddJob i make {Wages} per hour for {Hours}
+AddJob i make {Wages} dollars per hour for {Hours}
 
 DeleteJob delete the previous job
 DeleteJob delete job
@@ -20,3 +20,49 @@ AddExpense i paid off a bill of {Expense} dollars
 AddExpense i spent {Expense} dollars today
 AddExpense i spent {Expense} dollars
 AddExpense spent {Expense} dollars
+
+DeleteExpense delete last bill
+DeleteExpense delete last expense
+DeleteExpense delete last rent 
+DeleteExpense delete expense
+DeleteExpense delete most recent expense
+DeleteExpense delete most recent rent
+DeleteExpense delete most recent bill
+
+AddExtraCash add extra {ExtraCash} dollars
+AddExtraCash add a new sum of {ExtraCash} dollars to overall budget
+AddExtraCash add {ExtraCash} dollars to budget
+AddExtraCash add {ExtraCash} dollars
+
+DeleteExtraCash delete recently added extra cash 
+DeleteExtraCash delete recent savings 
+
+CheckExpenses check my expenses
+CheckExpenses check total expenses
+CheckExpenses check expenses
+CheckExpenses tell me my expenses 
+CheckExpenses what are my expenses 
+CheckExpenses how much money did i spend
+
+CheckOverall check my total savings 
+CheckOverall how much money do i have
+CheckOverall tell me how much i have 
+CheckOverall tell me how much money i have 
+CheckOverall what is my overall budget
+CheckOverall what are my current savings
+CheckOverall how much did i earn this week
+CheckOverall how much did i earn 
+
+
+
+ApplyChangesForWeek subtract expenses from savings 
+ApplyChangesForWeek subtract expenses from budget
+ApplyChangesForWeek apply changes for the week
+ApplyChangesForWeek update my budget 
+
+MakeSavingsPlan i want to save {Savings} dollars over the course of {Days}
+MakeSavingsPlan help me save {Savings} dollars for {Days}
+MakeSavingsPlan save {Savings} dollars for {Days}
+
+
+
