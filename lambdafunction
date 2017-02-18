@@ -3,15 +3,6 @@
  */
 var https = require('https')
 
-function employeeInfo(fname,lname,wages,hours)
-{
-    this.firstname=fname;
-    this.lastname=lname;
-    this.age=age;
-    this.eyecolor=eyecolor;
-}
-
-they=new person ("")
 
 exports.handler = (event, context) => {
 
@@ -29,7 +20,7 @@ exports.handler = (event, context) => {
                 console.log('LAUNCH REQUEST')
                 context.succeed(
                     generateResponse(
-                        buildSpeechletResponse("Welcome to your Alexa SKill, Guillermo the master of Amazon, this is running on a deployed lambda function you created for me master. What would you like me to do?", true),
+                        buildSpeechletResponse("Welcome to wallet nanny, to see all of my functions check the amazon alexa app. What would you like me to do?", true),
                         {}
                     )
                 )
@@ -38,28 +29,8 @@ exports.handler = (event, context) => {
             case "IntentRequest":
                 // > Intent Request
                 console.log('SESSION ENDED REQUEST')
-                context.succeed(
-                    generateResponse(
-                        buildSpeechletResponse("What are your wages and hours for the shift?", true)
-                    )
-                )
-
-                switch(event.request.intent.name) {
-
-                    //case "AddJob":
-                      //  var wages =
-
-
-
-
-                        //    }
-
-
-
-                        }
-
-
-
+                    
+                    
                 break;
 
             case "SessionEndedRequest":
