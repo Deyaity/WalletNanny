@@ -1,7 +1,8 @@
 {
   "intents": [
+    
       { "intent": "AddJob",
-        "slots": [
+        "slots": [	
                     {"name": "Hours", "type": "AMAZON.NUMBER"},
                     {"name": "Wages", "type": "AMAZON.NUMBER"}
                  ]
@@ -10,19 +11,18 @@
       { "intent": "AddExpense",
         "slots": [
                     {"name": "Expense", "type": "AMAZON.NUMBER"}
-                    // add the name as well to website 
                  ]
       },
       { "intent": "DeleteExpense"},
-                // include the name
+                
       { "intent": "AddExtraCash",
         "slots": [
                     {"name": "ExtraCash", "type": "AMAZON.NUMBER"}
-                  // name of extra cash
+                  
                  ]
       },
       { "intent": "DeleteExtraCash"},
-      // name of the extra cash 
+       
       { "intent": "CheckExpenses"},
     
       { "intent": "CheckOverall"},
@@ -35,11 +35,12 @@
       },
       { "intent": "CheckBuying",
         "slots": [
-                    {"name": "Product", "type": /*something*/}
+                    {"name": "Product", "type": "AMAZON.NUMBER"}
                  ]
       },
       { "intent": "BuyItem"},
-      { "intent": "SpentTooMuch"},
-      { "intent": ""};
+      { "intent": "SpentTooMuch"}
+      
+      
   ]
 }
