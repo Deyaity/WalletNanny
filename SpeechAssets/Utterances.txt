@@ -9,7 +9,14 @@ DeleteJob delete recently entered job
 DeleteJob delete previous job
 DeleteJob delete old job
 
-AddExpense 
-AddExpense
-AddExpense
-AddExpense
+AddExpense add rent of {Expense} dollars
+AddExpense add a bill of {Expense} dollars
+AddExpense add a cost of {Expense} dollars
+AddExpense add an expense of {Expense} dollars
+AddExpense i paid a bill of {Expense} dollars
+AddExpense i paid off a rent of {Expense} dollars
+AddExpense i paid off a rent of {Expense} dollars
+AddExpense i paid off a bill of {Expense} dollars
+AddExpense i spent {Expense} dollars today
+AddExpense i spent {Expense} dollars
+AddExpense spent {Expense} dollars
