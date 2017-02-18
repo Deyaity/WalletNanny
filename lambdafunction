@@ -1,11 +1,11 @@
 /**
  * Created by Guille on 2/18/17.
  */
-var https = require('https')
+var https = require('https');
 
+var participants = [];
 
 exports.handler = (event, context) => {
-
     try {
 
         if (event.session.new) {
@@ -17,10 +17,15 @@ exports.handler = (event, context) => {
 
             case "LaunchRequest":
                 // > Launch Request
-                console.log('LAUNCH REQUEST')
+                var speechText = "";
+                speechText += "Welcome to Alexa CheckMyBudget, ";
+                speechText += "You can tell me to do stuff like Add Job.  ";
+                var repromptText = "For instructions on what you can say, please say help me check my budget.";
+                //this.emit(':ask', speechText, repromptText);
+                //console.log('LAUNCH REQUEST')
                 context.succeed(
                     generateResponse(
-                        buildSpeechletResponse("Welcome to wallet nanny, to see all of my functions check the amazon alexa app. What would you like me to do?", true),
+                        buildSpeechletResponse(speechText,repromptText, false),
                         {}
                     )
                 )
@@ -28,9 +33,22 @@ exports.handler = (event, context) => {
 
             case "IntentRequest":
                 // > Intent Request
-                console.log('SESSION ENDED REQUEST')
-                    
-                    
+                console.log(event.request.intent)
+                if (event.request.intent.name.toUpperCase() === "ADDJOB") {
+                    context.succeed(
+                        generateResponse(
+                            buildSpeechletResponse("You worked " + event.request.intent.slots.Hours.value + " hours this week, and made " + (event.request.intent.slots.Hours.value * event.request.intent.slots.Wages.value) + " dollars for that time.", "blah", true),
+                            {}
+                        )
+                    )
+                } else {
+                    context.succeed(
+                        generateResponse(
+                            buildSpeechletResponse("No Job Found", "Please ask for another intent", false),
+                            {}
+                        )
+                    )
+                }
                 break;
 
             case "SessionEndedRequest":
@@ -43,19 +61,25 @@ exports.handler = (event, context) => {
 
         }
 
-    } catch(error) {context.fail('Exeption: ${error}')}
+    } catch(error) {context.fail('Exeption: ' + error)}
 }
 
 
 
 
 
-buildSpeechletResponse = (outputText, shouldEndSession) => {
+buildSpeechletResponse = (outputText, repromptText, shouldEndSession) => {
 
     return {
         outputSpeech: {
             type: "PlainText",
             text: outputText
+        },
+        reprompt: {
+          outputSpeech: {
+            type: "PlainText",
+            text: repromptText
+          }
         },
         shouldEndSession: shouldEndSession
     }
