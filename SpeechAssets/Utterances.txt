@@ -36,6 +36,8 @@ AddExtraCash add {ExtraCash} dollars
 
 DeleteExtraCash delete recently added extra cash 
 DeleteExtraCash delete recent savings 
+DeleteExtraCash take away my recent inputs
+
 
 CheckExpenses check my expenses
 CheckExpenses check total expenses
