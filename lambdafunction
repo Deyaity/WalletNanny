@@ -29,6 +29,12 @@ exports.handler = (event, context) => {
             case "IntentRequest":
                 // > Intent Request
                 console.log('SESSION ENDED REQUEST')
+                
+                switch(event.request.intent.name) {
+                    case "AddJob":
+                        var hours = parseInt();
+                        var wages = parseInt();
+                }
                     
                     
                 break;
