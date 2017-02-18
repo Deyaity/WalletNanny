@@ -3,6 +3,16 @@
  */
 var https = require('https')
 
+function employeeInfo(fname,lname,wages,hours)
+{
+    this.firstname=fname;
+    this.lastname=lname;
+    this.age=age;
+    this.eyecolor=eyecolor;
+}
+
+they=new person ("")
+
 exports.handler = (event, context) => {
 
     try {
@@ -28,28 +38,27 @@ exports.handler = (event, context) => {
             case "IntentRequest":
                 // > Intent Request
                 console.log('SESSION ENDED REQUEST')
+                context.succeed(
+                    generateResponse(
+                        buildSpeechletResponse("What are your wages and hours for the shift?", true)
+                    )
+                )
 
                 switch(event.request.intent.name) {
 
-                    case "AddJob":
-                        var endpoint = "https://api.bls.gov/publicAPI/v2/timeseries/data/"
-                        var body = ""
-                        https.get(endpoint, (response) => {
-                            response.on('data', (chunk) => { body += chunk })
-                            response.on('end', () => {
-
-                                var data = JSON.parse(body)
-                                var wageAverage = data.
+                    //case "AddJob":
+                      //  var wages =
 
 
 
-                            }
+
+                        //    }
 
 
 
                         }
 
-                }
+
 
                 break;
 
