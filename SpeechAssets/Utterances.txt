@@ -64,5 +64,11 @@ MakeSavingsPlan i want to save {Savings} dollars over the course of {Days}
 MakeSavingsPlan help me save {Savings} dollars for {Days}
 MakeSavingsPlan save {Savings} dollars for {Days}
 
-// add checkbuying, buyitem, and amibroke
+SpentTooMuch am i broke
+SpentTooMuch did i spend too much
+SpentTooMuch did i break the bank
+SpentTooMuch did i go over my budget
+SpentTooMuch is my economic situation screwed
+SpentTooMuch will the bad man come after me
+
 
