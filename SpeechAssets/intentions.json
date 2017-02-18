@@ -10,16 +10,21 @@
       { "intent": "AddExpense",
         "slots": [
                     {"name": "Expense", "type": "AMAZON.NUMBER"}
+                    // add the name as well to website 
                  ]
       },
       { "intent": "DeleteExpense"},
+                // include the name
       { "intent": "AddExtraCash",
         "slots": [
                     {"name": "ExtraCash", "type": "AMAZON.NUMBER"}
+                  // name of extra cash
                  ]
       },
       { "intent": "DeleteExtraCash"},
+      // name of the extra cash 
       { "intent": "CheckExpenses"},
+    
       { "intent": "CheckOverall"},
       { "intent": "ApplyChangesForWeek"},
       { "intent": "MakeSavingsPlan",
@@ -35,5 +40,6 @@
       },
       { "intent": "BuyItem"},
       { "intent": "SpentTooMuch"},
+      { "intent": ""};
   ]
 }
