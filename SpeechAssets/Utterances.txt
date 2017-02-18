@@ -64,5 +64,5 @@ MakeSavingsPlan i want to save {Savings} dollars over the course of {Days}
 MakeSavingsPlan help me save {Savings} dollars for {Days}
 MakeSavingsPlan save {Savings} dollars for {Days}
 
-
+// add checkbuying, buyitem, and amibroke
 
